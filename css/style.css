@@ -1,43 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Oregano&display=swap');
+
 * {
-    box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    border: 0px;
 }
 
 body {
     background-image: url('../img/backgroundpizza.jpg');
-    width: 10px;
-}
-
-.content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 100vh;
+    background-position: center center;
 }
 
 header {
-    /* display: flex; */
+    background: #1615157e;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+
+div {
+    height: 84vh;
+}
+
+.home {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    padding: 30px 10%;
+    margin-right: 20%;
+    color: white;
+}
+
+.home p {
+    font-size: 90px;
+    line-height: 90px;
+    font-family: 'Oregano', cursive;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
 }
 
 nav {
-    width: 100%;
-    mix-blend-mode: soft-light;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: 'Oregano', cursive;
+    font-size: 35px;
+    height: 8vh;
 }
 
+.nav-list {
+    list-style: none;
+    display: flex;
+}
 
-li,
-a,
-button {
-    display: inline-block;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+.nav-list li {
+    letter-spacing: 3px;
+    margin-right: 100px;
+}
+
+/* .mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background-size: #ffffff;
+    margin: 8px;
+} */
+
+
+
+@media (max-width: 999px) {
+    nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-family: 'Oregano', cursive;
+        font-size: 35px;
+        height: 8vh;
+    }
+}
+
+main {
+    width: 100vw;
+    height: 84vh;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Fira Code', monospace;
+    font-size: 20px;
     font-weight: 500;
-    font-size: 25px;
-    text-decoration: none;
+    color: white;
+    height: 8vh;
+    background: #1615157e;
 }
