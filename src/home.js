@@ -2,7 +2,7 @@ function createHome() {
     const home = document.createElement('div');
     home.classList.add('home');
 
-    home.appendChild(createParagraph("Best pizza in Crato."))
+    home.appendChild(createParagraph('The Sourdough'))
 
     return home;
 }

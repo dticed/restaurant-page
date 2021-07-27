@@ -2,7 +2,6 @@ import loadHome from "./home";
 
 function createHeader() {
     const header = document.createElement('header');
-    header.classList.add('header');
     header.appendChild(createNav());
 
     return header;
@@ -11,32 +10,48 @@ function createHeader() {
 function createNav() {
     const nav = document.createElement('nav');
     const ul = document.createElement('ul');
-    const liHome = document.createElement('li');
-    const liMenu = document.createElement('li');
-    const liContact = document.createElement('li');
+    ul.classList.add('nav-list');
 
-    const homeButton = document.createElement('button');
-    homeButton.classList.add('button-nav')
-    homeButton.textContent = 'Home';
-    liHome.appendChild(homeButton);
-    ul.appendChild(liHome)
-    
-    const menuButton = document.createElement('button');
-    menuButton.classList.add('button-nav');
-    menuButton.textContent = "Menu";
-    liMenu.appendChild(menuButton);
+    const liHome = document.createElement('li');
+    const aHome = document.createElement('a');
+    aHome.setAttribute('href', '#')
+    aHome.textContent = "Home";
+    liHome.appendChild(aHome);
+    ul.appendChild(liHome);
+
+    const liMenu = document.createElement('li');
+    const aMenu = document.createElement('a');
+    aMenu.setAttribute('href', '#')
+    aMenu.textContent = "Menu";
+    liMenu.appendChild(aMenu);
     ul.appendChild(liMenu);
 
-    const contactButton = document.createElement('button');
-    contactButton.classList.add('button-nav');
-    contactButton.textContent = 'Contact';
-    liContact.appendChild(contactButton);
+    const liContact = document.createElement('li');
+    const aContact = document.createElement('a');
+    aContact.setAttribute('href', '#')
+    aContact.textContent = "Contact";
+    liContact.appendChild(aContact);
     ul.appendChild(liContact);
 
     nav.appendChild(ul);
+    //nav.appendChild(createMobileMenu());
 
     return nav;
 }
+
+// function createMobileMenu() {
+//     const divMobile = document.createElement('div');
+//     divMobile.classList.add('mobile-menu')
+//     const line1 = document.createElement('div');
+//     const line2 = document.createElement('div');
+//     const line3 = document.createElement('div');
+
+//     divMobile.appendChild(line1);
+//     divMobile.appendChild(line2);
+//     divMobile.appendChild(line3);
+
+//     return divMobile;
+// }
 
 function createMain() {
     const main = document.createElement("main");
@@ -47,15 +62,21 @@ function createMain() {
 }
 
 function createFooter() {
+    const footer = document.createElement('footer');
+    const paragraph = document.createElement('p');
 
+    paragraph.textContent = "Developed by Lucas Pierre"
+    footer.appendChild(paragraph);
+
+    return footer;
 }
 
 function createWebSite() {
-    const content = document.getElementById('content');
-    content.classList.add('content')
+    const body = document.querySelector('body');
 
-    content.appendChild(createHeader());
-    content.appendChild(createMain());
+    body.appendChild(createHeader());
+    body.appendChild(createMain());
+    body.appendChild(createFooter())
 
     loadHome();
 }
