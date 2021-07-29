@@ -1,4 +1,5 @@
 import loadHome from "./home";
+import loadMenu from "./menu";
 import loadContact from "./contact";
 
 
@@ -31,6 +32,9 @@ function createNav() {
     aMenu.textContent = "Menu";
     liMenu.appendChild(aMenu);
     ul.appendChild(liMenu);
+    aMenu.addEventListener('click', function(){
+        loadMenu();
+    })
 
     const liContact = document.createElement('li');
     const aContact = document.createElement('a');
