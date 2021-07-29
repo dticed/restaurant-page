@@ -1,4 +1,6 @@
 import loadHome from "./home";
+import loadContact from "./contact";
+
 
 function createHeader() {
     const header = document.createElement('header');
@@ -19,6 +21,10 @@ function createNav() {
     liHome.appendChild(aHome);
     ul.appendChild(liHome);
 
+    aHome.addEventListener('click', function() {
+        loadHome();
+    })
+
     const liMenu = document.createElement('li');
     const aMenu = document.createElement('a');
     aMenu.setAttribute('href', '#')
@@ -32,6 +38,9 @@ function createNav() {
     aContact.textContent = "Contact";
     liContact.appendChild(aContact);
     ul.appendChild(liContact);
+    aContact.addEventListener('click', function() {
+        loadContact();
+    })
 
     nav.appendChild(ul);
     //nav.appendChild(createMobileMenu());
@@ -63,10 +72,10 @@ function createMain() {
 
 function createFooter() {
     const footer = document.createElement('footer');
-    const paragraph = document.createElement('p');
+    const spanFooter = document.createElement('span');
 
-    paragraph.textContent = "Developed by Lucas Pierre"
-    footer.appendChild(paragraph);
+    spanFooter.textContent = "Developed by Lucas Pierre"
+    footer.appendChild(spanFooter);
 
     return footer;
 }

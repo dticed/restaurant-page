@@ -1,0 +1,7 @@
+function createMenu() {
+
+}
+
+function loadHome() {
+    
+}
