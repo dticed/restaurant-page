@@ -2,7 +2,7 @@
 
 First project with webpack
 
-Visit the app homepage [myLibrary](https://dticed.github.io/restaurant-page/) :point_left:
+Visit the app homepage [Live Code](https://dticed.github.io/restaurant-page/) :point_left:
 
 ## Built With
 
